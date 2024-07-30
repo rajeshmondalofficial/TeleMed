@@ -60,13 +60,18 @@ ul{
     color: #fff;
     transition: ease-in-out .3s;
 }
-.ht-col ul li a span{
+.ht-icn-bg{
     background-color: #fff;
-    color: #07092B;
-    padding: 8px 10px;
     border-radius: 20px;
     margin-right: 10px;
-    
+    aspect-ratio: 1 / 1;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ht-icn-bg span{
+    color: #07092B;
 }
 .ht-col ul li a:hover{
     color: #6B9AF3;
@@ -309,14 +314,6 @@ ul{
     border: 2px solid #6b9bf3;
     transition: ease-in-out .4s;
 }
-.ben-col span{
-    font-size: 40px;
-    color: #207EF7;
-    background-color: #6b9bf366;
-    padding: 30px;
-    border-radius: 100%;
-    border: 2px solid #207EF7;
-}
 .ben-col h1{
     font-size: 24px;
     color: #07092B;
@@ -327,6 +324,21 @@ ul{
 .ben-col p{
     font-size: 16px;
     color: #07092b92;
+}
+.ben-icn-bg{
+    background-color: #6b9bf366;
+    border-radius: 100%;
+    border: 2px solid #207EF7;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.ben-icn-bg span{
+    font-size: 40px;
+    color: #207EF7;
 }
 /*health-serv end*/
 
@@ -698,11 +710,12 @@ ul{
 .social-row ul li{
     display: inline-block;
 }
-.social-row ul li a{
+.ft-icn-bg{
     font-size: 16px;
     color: #f1f1f1;
     margin-right: 10px;
-    padding: 8px 12px;
+    aspect-ratio: 1 / 1;
+    height: 40px;
     background-color: #6B9AF3;
     border-radius: 50px;
 }

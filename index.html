@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/hover.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
     <link rel="stylesheet" href="assets/css/jquery-backToTop.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -822,6 +821,13 @@
     <script>
       $.backToTop();
   </script>
+
+  <script>
+    const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+    const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
+  </script>
+
+  
     <script>
       $(document).ready(function() {
         $('.owl-carousel').owlCarousel({

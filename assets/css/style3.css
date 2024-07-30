@@ -60,13 +60,18 @@ ul{
     color: #fff;
     transition: ease-in-out .3s;
 }
-.ht-col ul li a span{
+.ht-icn-bg{
     background-color: #fff;
-    color: #07092B;
-    padding: 8px 10px;
     border-radius: 20px;
     margin-right: 10px;
-    
+    aspect-ratio: 1 / 1;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ht-icn-bg span{
+    color: #07092B;
 }
 .ht-col ul li a:hover{
     color: #6B9AF3;
@@ -223,6 +228,66 @@ ul{
     background-size: cover;
     background-position: center;
 }
+.play1{
+    background-color: #207EF7;
+    height: 70px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+}
+.play1::before{
+    content: '';
+    position: absolute;
+    border: 1px solid #207EF7;
+    border-radius: 20%;
+    width: 100%;
+    height: 100%;
+    animation: bloom1 1.5s linear infinite;
+    opacity: 0;
+    z-index: 1;
+}
+.play1::after{
+    content: '';
+    position: absolute;
+    border: 1px solid #207EF7;
+    border-radius: 20%;
+    width: 100%;
+    height: 100%;
+    animation: bloom2 1.5s linear infinite;
+    opacity: 0;
+    z-index: 1;
+    animation-delay: 0.5s;
+}
+@keyframes bloom1{
+    0%{
+        transform: scale(.8);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+@keyframes bloom2{
+    0%{
+        transform: scale(.8);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+.play1 span{
+    font-size: 36px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
 .about-txt-col h5{
     font-size: 16px;
     color: #6B9AF3;
@@ -336,14 +401,6 @@ ul{
     border: 2px solid #6b9bf3;
     transition: ease-in-out .4s;
 }
-.ben-col span{
-    font-size: 40px;
-    color: #207EF7;
-    background-color: #6b9bf366;
-    padding: 30px;
-    border-radius: 100%;
-    border: 2px solid #207EF7;
-}
 .ben-col h1{
     font-size: 24px;
     color: #07092B;
@@ -354,6 +411,21 @@ ul{
 .ben-col p{
     font-size: 16px;
     color: #07092b92;
+}
+.ben-icn-bg{
+    background-color: #6b9bf366;
+    border-radius: 100%;
+    border: 2px solid #207EF7;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.ben-icn-bg span{
+    font-size: 40px;
+    color: #207EF7;
 }
 /*health-serv end*/
 
@@ -394,24 +466,58 @@ ul{
     object-fit: cover;
     object-position: top;
 }
-.qna{
-    border: 1px solid #07092b7b;
+.qna-all li{
+    list-style: none;
+    border-radius: 10px;
+    border: .5px solid #11111134;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
-.faq-btn{
-    background-image: url(../images/plus.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 70px;
-    width: 50px;
-    margin-right: 20px;
-    border-radius: 0px !important;
-    color: #207EF7 !important;
+.qna-all li label{
+    display: flex;
+    align-items: center !important;
+    font-size: 20px !important;
+    font-family: 600 !important;
+    color: #07092B !important;
+    cursor: pointer;
 }
-.qna p{
-    font-size: 20px;
+.qna-all li label::before{
+    content: '+';
+    margin-right: 15px;
+    font-size: 28px;
     font-weight: 600;
+    background-color: #207EF7;
+    color: #f1f1f1;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out .5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.qna-all .qna-con{
+    max-height: 0px;
+    overflow: hidden;
+    transition: ease-in-out .5s;
+}
+.qna-con p{
+    font-size: 16px;
     color: #07092B;
-    margin-bottom: 0px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.qna-all input[type="radio"]:checked + label + .qna-con{
+    max-height: 350px;
+    transition: ease-in-out .5s;
+}
+.qna-all input[type="radio"]:checked + label::before{
+    content: '-';
+    transition: ease-in-out .5s;
 }
 /*faq end*/
 
@@ -609,11 +715,12 @@ ul{
 .social-row ul li{
     display: inline-block;
 }
-.social-row ul li a{
+.ft-icn-bg{
     font-size: 16px;
     color: #f1f1f1;
     margin-right: 10px;
-    padding: 8px 12px;
+    aspect-ratio: 1 / 1;
+    height: 40px;
     background-color: #6B9AF3;
     border-radius: 50px;
 }

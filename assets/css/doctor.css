@@ -60,13 +60,18 @@ ul{
     color: #fff;
     transition: ease-in-out .3s;
 }
-.ht-col ul li a span{
+.ht-icn-bg{
     background-color: #fff;
-    color: #07092B;
-    padding: 8px 10px;
     border-radius: 20px;
     margin-right: 10px;
-    
+    aspect-ratio: 1 / 1;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ht-icn-bg span{
+    color: #07092B;
 }
 .ht-col ul li a:hover{
     color: #6B9AF3;
@@ -205,16 +210,39 @@ ul{
 .doc-col img{
     margin-bottom: 15px;
 }
-.doc-col h1{
+.doc-col:hover .doc-txt{
+    opacity: 0;
+    transition: ease-in-out .3s;
+}
+.doc-txt{
+    opacity: 1;
+    transition: ease-in-out .3s;
+}
+.doc-col:hover .doc-hvr-data{
+    top: 80%;
+    opacity: 1;
+    transition: ease-in-out .3s;
+}
+.doc-hvr-data{
+    background-color: #f1f1f1;
+    padding: 10px;
+    transform: scale(.9);
+    top: 100%;
+    width: 85%;
+    filter: drop-shadow(2px 0px 10px #11111193);
+    opacity: 0;
+    transition: ease-in-out .3s;
+}
+.doc-txt h1, .doc-hvr-data h1{
     font-size: 20px;
     color: #07092B;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.doc-col h2{
+.doc-txt h2, .doc-hvr-data h2{
     font-size: 16px;
     color: #207EF7;
-    margin-bottom: 0px !important;
+    margin-bottom: 10px !important;
 }
 /*doctors end*/
 
@@ -241,11 +269,12 @@ ul{
 .social-row ul li{
     display: inline-block;
 }
-.social-row ul li a{
+.ft-icn-bg{
     font-size: 16px;
     color: #f1f1f1;
     margin-right: 10px;
-    padding: 8px 12px;
+    aspect-ratio: 1 / 1;
+    height: 40px;
     background-color: #6B9AF3;
     border-radius: 50px;
 }
