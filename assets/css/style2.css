@@ -198,6 +198,67 @@ ul{
     color: #207EF7 !important;
     transition: ease-in-out .4s;
 }
+.head-btns{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #07092B !important;
+    padding: 0px 15px !important;
+    transition: ease-in-out .4s;
+    position: relative;
+}
+.head-btns:hover{
+    color: #207EF7 !important;
+    transition: ease-in-out .4s;
+}
+.dd-all ul{
+    padding-left: 0px !important;
+}
+.dd-all ul li{
+    display: block;
+    padding: 10px 25px;
+}
+.dd-all ul li a{
+    display: block;
+    font-size: 16px;
+    color: #F8F8F8;
+    font-weight: 600;
+    text-decoration: none;
+}
+.dd-all{
+    background-color: #6b9bf3a2;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 70%;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .3s, transform .3s;
+    z-index: 2;
+}
+.dd-all-1{
+    left: 30%;
+}
+.dd-all-2{
+    left: 41%;
+}
+.dd-all-3{
+    left: 47%;
+}
+.dd-all-4{
+    left: 52%;
+}
+.dd-all-5{
+    left: 57%;
+}
+.dd-all ul li a:hover{
+    color: #07092B;
+    transition: ease-in-out .3s;
+}
+.head-item:hover .dd-all{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity .3s, transform .3s;
+}
 .main-nav{
     display: flex;
     justify-content: space-between;
